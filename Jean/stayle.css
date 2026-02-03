@@ -143,11 +143,16 @@ nav a:hover::after {
 }
 
 .card {
-  background: rgba(255, 255, 255, 0.75);
+    background: rgba(255, 255, 255, 0.75);
   padding: 25px;
   border-radius: 22px;
   box-shadow: 0 10px 28px rgba(0, 0, 0, 0.06);
   transition: 0.3s;
+
+  display: flex;          /* ⬅️ bikin ke samping */
+  align-items: center;    /* sejajar tengah */
+  gap: 20px;              /* jarak foto & teks */
+  
 }
 
 .card:hover {
@@ -162,6 +167,67 @@ nav a:hover::after {
 .card p {
   color: #6f4a5f;
   font-size: 0.95rem;
+}
+/* ===== FOTO / GAMBAR ===== */
+.foto-profil {
+  width: 150px;          /* ukuran default */
+  height: 150px;
+  object-fit: cover;     /* biar tidak gepeng */
+  border-radius: 50%;    /* bulat (hapus kalau mau kotak) */
+  display: flex;
+  margin: 0 auto 20px;   /* tengah + jarak bawah */
+}
+
+/* ===== GAMBAR DI DALAM CARD ===== */
+.card img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 12px;
+  flex-shrink: 0; /* biar gambar tidak mengecil */
+}
+
+/* ===== RESPONSIVE (HP) ===== */
+@media (max-width: 600px) {
+  .card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .card img {
+    width: 100px;
+    height: 100px;
+  }
+}/* ===== FOTO / GAMBAR ===== */
+.foto-profil {
+  width: 150px;          /* ukuran default */
+  height: 150px;
+  object-fit: cover;     /* biar tidak gepeng */
+  border-radius: 50%;    /* bulat (hapus kalau mau kotak) */
+  display: flex;
+  margin: 0 auto 20px;   /* tengah + jarak bawah */
+}
+
+/* ===== GAMBAR DI DALAM CARD ===== */
+.card img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 12px;
+  flex-shrink: 0; /* biar gambar tidak mengecil */
+}
+
+/* ===== RESPONSIVE (HP) ===== */
+@media (max-width: 600px) {
+  .card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .card img {
+    width: 100px;
+    height: 100px;
+  }
 }
 
 /* ================= CONTACT ================= */
