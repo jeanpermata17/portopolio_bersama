@@ -1,0 +1,195 @@
+/* ===== IMPORT FONT ===== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ===== BODY ===== */
+body {
+  background: linear-gradient(135deg, #fff0f5, #fde7ef);
+  color: #5a2a3a;
+  line-height: 1.6;
+}
+
+/* ===== HEADER ===== */
+header {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  text-align: center;
+  padding: 40px 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+header h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+header p {
+  margin: 10px 0 20px;
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+/* ===== NAV ===== */
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #b05c7a;
+  font-weight: 500;
+  padding: 6px 14px;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  background: #f7c6d9;
+  color: #5a2a3a;
+}
+
+/* ===== SECTION ===== */
+.section {
+  padding: 70px 10%;
+}
+
+.section h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+/* ===== SOFT BACKGROUND ===== */
+.soft-bg {
+  background: rgba(255,255,255,0.6);
+  border-radius: 30px;
+  margin: 40px auto;
+  width: 90%;
+}
+
+/* ===== ABOUT IMAGE ===== */
+.about-image {
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+.about-image img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 6px solid #f7c6d9;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* ===== SKILLS ===== */
+.skills {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.skills span {
+  background: #f7c6d9;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: 500;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+/* ===== BIODATA ===== */
+.biodata {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+/* ===== CARD ===== */
+.card {
+  background: rgba(255,255,255,0.75);
+  padding: 25px;
+  border-radius: 25px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  color: #b05c7a;
+}
+
+/* ===== CARD IMAGE GRID ===== */
+.card-image {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.card-image img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.card-image img:hover {
+  transform: scale(1.05);
+}
+
+/* ===== CONTACT ===== */
+form {
+  max-width: 450px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input, textarea {
+  padding: 12px 15px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  background: #fff;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+textarea {
+  resize: none;
+  height: 120px;
+}
+
+button {
+  padding: 12px;
+  border-radius: 25px;
+  border: none;
+  background: #f7c6d9;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #e9a9c1;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  text-align: center;
+  padding: 25px;
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
