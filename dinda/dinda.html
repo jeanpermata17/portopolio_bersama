@@ -21,7 +21,7 @@ body {
     font-size: 18px; 
 }
 .container {
-    max-width: 900px;
+    max-width: 1100px;
     width: 100%;
     background: #fff;
     padding: 40px;
@@ -29,7 +29,6 @@ body {
     box-shadow: 0 20px 40px rgba(0, 0, 0, .15);
     position: relative;
     overflow: hidden;
-    
 }
 .container::before {
     content: "✨💖✨";
@@ -44,16 +43,19 @@ body {
     bottom: 15px;
     left: 20px;
     font-size: 2rem;
-     transform: translateY(-4px) scale(1.05);
-    box-shadow: 0 12px 25px rgba(0, 0, 0, .25);
+    transform: scale(1.05);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, .3);
 }
+
 .profile {
     text-align: center;
     margin-bottom: 35px;
 }
 .profile img {
-    width: 170px;
-    height: 170px;
+    max-width: 70%;
+    max-height: 170px;
+    width: auto;
+    height: auto;
     border-radius: 50%;
     object-fit: cover;
     border: 6px solid #f783ac;
@@ -95,9 +97,10 @@ nav a {
 nav a:hover {
     background-color: #4dabf7;
     color: #fff;
-    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.2); /* Efek bayangan lebih besar saat hover */
-    transform: translateY(-8px); /* Elemen sedikit terangkat saat hover */
+    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05); /* Menambah ukuran sedikit tanpa mengubah posisi */
 }
+
 
 .section {
     margin-top: 30px;
@@ -162,46 +165,24 @@ ul li::before {
     transform: translateY(-4px) scale(1.05);
     box-shadow: 0 12px 25px rgba(0, 0, 0, .25);
 }
-.music-player {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 999;
-}
-.music-player button {
-    background: linear-gradient(135deg, #4d53f7, red);
-    border: none;
-    padding: 12px 18px;
-    border-radius: 30px;
-    color: #fff;
-    font-weight: 600;
-    cursor: pointer;
-    box-shadow: 0 8px 18px rgba(0, 0, 0, .2);
-    transition: .3s;
-}
-.music-player button:hover {
-    transform: scale(1.1);
-    box-shadow: 0 12px 25px rgba(0, 0, 0, .3);
-}
-.btn-kembali {
-    background: linear-gradient(135deg, #f783ac, #4dabf7);
-    color: #fff;
+
+.btn-back-to-top {
+    background-color: #4dabf7;
+    color: white;
     padding: 12px 25px;
+    border-radius: 30px;
+    border: none;
     cursor: pointer;
     box-shadow: 0 8px 18px rgba(0, 0, 0, .2);
     transition: all 0.3s ease;
-    font-size: 1rem;
-    border-radius: 50px;
+    margin-top: 20px;
+    display: inline-block;
 }
-.btn-kembali:hover {
+.btn-back-to-top:hover {
+    background-color: #f783ac;
     transform: scale(1.05);
     box-shadow: 0 12px 25px rgba(0, 0, 0, .3);
 }
-.btn-kembali:active {
-    transform: scale(0.95);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, .2);
-}
-
 </style>
 </head>
 
@@ -212,7 +193,7 @@ ul li::before {
     <nav>
         <a href="#tentang-saya">Tentang Saya</a>
         <a href="#hobi-saya">Hobi Saya</a>
-        <a href="#makanan-favorit">Mknan & mnuman Favorit</a>
+        <a href="#makanan-favorit">Mknan Favorit</a>
         <a href="#sosial-media">Sosial Media</a>
     </nav>
 
@@ -229,7 +210,9 @@ ul li::before {
                 yang sangat tertarik dengan dunia teknologi, khususnya pengembangan web. 
                 Sejak kecil, saya sudah tertarik dengan hal-hal yang berhubungan dengan komputer dan internet. 
                 Saya selalu ingin tahu lebih banyak tentang cara membuat situs web 
-                dan aplikasi yang bisa mempermudah kehidupan sehari-hari. ✨💖</p>
+                dan aplikasi yang bisa mempermudah kehidupan sehari-hari. ✨💖
+            </p>
+            <button class="btn-back-to-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">Kembali ke Atas</button>
         </div>
     </div>
 
@@ -237,24 +220,24 @@ ul li::before {
         <h2>Hobi Saya</h2>
         <div class="card">
             <ul>
-                <li></li>
                 <li>Ngoding <br><img src="gmbar/coding.png" alt="Hobi Saya" style="width:20%";></li>
                 <li>Bermain game <br><img src="gmbar/game.png" alt="Hobi Saya" style="width:20%";> <br>
                     <a href="https://poki.com/id/g/temple-run-2" target="_blank">klik ini & cobalah bbrapa game yg saia mainkn!</a>
                 </li>
                 <li>Mendengarkan musik <br><img src="gmbar/musik.png" alt="Hobi Saya" style="width:20%";><br> </li>
             </ul>
+            <button class="btn-back-to-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">Kembali ke Atas</button>
         </div>
     </div>
 
     <div class="section" id="makanan-favorit">
-        <h2>Mknan & mnumn Favorit Saya</h2>
+        <h2>Mknan Favorit Saya</h2>
         <div class="card">
             <ul>
                 <li>Mie goreng <br><img src="gmbar/mie.png" alt="Makanan Favorit" style="width:20%;"></li>
                 <li>Ayam geprek <br><img src="gmbar/ayam.png" alt="Makanan Favorit" style="width:20%;"></li>
-                <li>Susu <br><img src="gmbar/susu.png" alt="Makanan Favorit" style="width:20%;"></li>
             </ul>
+             <button class="btn-back-to-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">Kembali ke Atas</button>
         </div>
     </div>
 
@@ -265,4 +248,5 @@ ul li::before {
         <a href="https://facebook.com/Cara Mell" target="_blank">Facebook 📘</a>
         <a href="https://github.com" target="_blank">GitHub 🐙</a>
     </div>
+     <button class="btn-back-to-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">Kembali ke Atas</button>
 </div>
