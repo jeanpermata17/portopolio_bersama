@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio Dinda</title>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Poppins", "Segoe UI", sans-serif;
+    background: linear-gradient(135deg, #74c0fc, #f783ac);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #343a40;
+    font-size: 18px; 
+}
+.container {
+    max-width: 1100px;
+    width: 100%;
+    background: #fff;
+    padding: 40px;
+    border-radius: 25px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, .15);
+    position: relative;
+    overflow: hidden;
+}
+.container::before {
+    content: "✨💖✨";
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 1.5rem;
+}
+.container::after {
+    content: "🧸ྀི";
+    position: absolute;
+    bottom: 15px;
+    left: 20px;
+    font-size: 2rem;
+    transform: scale(1.05);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, .3);
+}
+
+.profile {
+    text-align: center;
+    margin-bottom: 35px;
+}
+.profile img {
+    max-width: 70%;
+    max-height: 170px;
+    width: auto;
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 6px solid #f783ac;
+    box-shadow: 0 10px 25px rgba(247, 131, 172, .5);
+    transition: .4s;
+    cursor: pointer;
+}
+.profile img:hover {
+    transform: scale(1.05) rotate(3deg);
+}
+.profile h1 {
+    font-size: 2.8rem; 
+    color: #0d6efd;
+    margin-top: 15px;
+}
+.profile p {
+    color: #f06595;
+    font-weight: 600;
+}
+nav {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: blue;
+    font-weight: 600;
+    padding: 12px 20px;
+    margin: 0 15px;
+    background-color: #fff;
+    border-radius: 30px;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+    transition: all 0.3s ease; /* Transisi halus */
+    cursor: pointer;
+}
+
+nav a:hover {
+    background-color: #4dabf7;
+    color: #fff;
+    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05); /* Menambah ukuran sedikit tanpa mengubah posisi */
+}
+
+
+.section {
+    margin-top: 30px;
+}
+.section h2 {
+    font-size: 1.6rem;
+    color: #0d6efd;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    padding: 10px;
+}
+.section h2::before {
+    content: "💗";
+}
+.card {
+    background: linear-gradient(135deg, #f8f9fa, #ffffff);
+    border-radius: 20px;
+    padding: 50px;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, .12);
+    transition: all .4s ease;
+    cursor: pointer;
+}
+.card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 18px 35px rgba(0, 0, 0, .25);
+}
+ul {
+    list-style: none;
+    margin-top: 10px;
+}
+ul li {
+    margin-bottom: 10px;
+    padding-left: 28px;
+    position: relative;
+}
+ul li::before {
+    content: "💖";
+    position: absolute;
+    left: 0;
+}
+.sosmed {
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.sosmed a {
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #4dabf7, #f783ac);
+    color: #fff;
+    font-weight: 600;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, .2);
+    transition: .3s;
+    cursor: pointer;
+}
+.sosmed a:hover {
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, .25);
+}
+
+.btn-back-to-top {
+    background-color: #4dabf7;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, .2);
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    display: inline-block;
+}
+.btn-back-to-top:hover {
+    background-color: #f783ac;
+    transform: scale(1.05);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, .3);
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <nav>
+        <a href="#tentang-saya">Tentang Saya</a>
+        <a href="#hobi-saya">Hobi Saya</a>
+        <a href="#makanan-favorit">Mknan Favorit</a>
+        <a href="#sosial-media">Sosial Media</a>
+    </nav>
+
+    <div class="profile">
+        <img src="gmbar/propil.png" alt="Foto Profil">
+        <h1>Dinda Fitrian Agustin</h1>
+        <p>Pelajar | Web Developer 💻</p>
+    </div>
+
+    <div class="section" id="tentang-saya">
+        <h2>Tentang Saya</h2>
+        <div class="card">
+            <p>"Saya adalah siswi kelas 10 di SMK Riyadhul Ulum 
+                yang sangat tertarik dengan dunia teknologi, khususnya pengembangan web. 
+                Sejak kecil, saya sudah tertarik dengan hal-hal yang berhubungan dengan komputer dan internet. 
+                Saya selalu ingin tahu lebih banyak tentang cara membuat situs web 
+                dan aplikasi yang bisa mempermudah kehidupan sehari-hari. ✨💖
+            </p>
+            <button class="btn-back-to-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">Kembali ke Atas</button>
+        </div>
+    </div>
+
+    <div class="section" id="hobi-saya">
+        <h2>Hobi Saya</h2>
+        <div class="card">
+            <ul>
+                <li>Ngoding <br><img src="gmbar/coding.png" alt="Hobi Saya" style="width:20%";></li>
+                <li>Bermain game <br><img src="gmbar/game.png" alt="Hobi Saya" style="width:20%";> <br>
+                    <a href="https://poki.com/id/g/temple-run-2" target="_blank">klik ini & cobalah bbrapa game yg saia mainkn!</a>
+                </li>
+                <li>Mendengarkan musik <br><img src="gmbar/musik.png" alt="Hobi Saya" style="width:20%";><br> </li>
+            </ul>
+            <button class="btn-back-to-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">Kembali ke Atas</button>
+        </div>
+    </div>
+
+    <div class="section" id="makanan-favorit">
+        <h2>Mknan Favorit Saya</h2>
+        <div class="card">
+            <ul>
+                <li>Mie goreng <br><img src="gmbar/mie.png" alt="Makanan Favorit" style="width:20%;"></li>
+                <li>Ayam geprek <br><img src="gmbar/ayam.png" alt="Makanan Favorit" style="width:20%;"></li>
+            </ul>
+             <button class="btn-back-to-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">Kembali ke Atas</button>
+        </div>
+    </div>
+
+<div class="section" id="sosial-media">
+    <h2>Sosial Media Saya</h2>
+    <div class="sosmed">
+        <a href="https://instagram.com/me_clynophile08" target="_blank">Instagram 📸</a>
+        <a href="https://facebook.com/Cara Mell" target="_blank">Facebook 📘</a>
+        <a href="https://github.com" target="_blank">GitHub 🐙</a>
+    </div>
+     <button class="btn-back-to-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">Kembali ke Atas</button>
+</div>
