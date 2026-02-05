@@ -1,252 +1,216 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portfolio Dinda</title>
-<style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-body {
-    font-family: "Poppins", "Segoe UI", sans-serif;
-    background: linear-gradient(135deg, #74c0fc, #f783ac);
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #343a40;
-    font-size: 18px; 
-}
-.container {
-    max-width: 1100px;
-    width: 100%;
-    background: #fff;
-    padding: 40px;
-    border-radius: 25px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, .15);
-    position: relative;
-    overflow: hidden;
-}
-.container::before {
-    content: "✨💖✨";
-    position: absolute;
-    top: 15px;
-    right: 20px;
-    font-size: 1.5rem;
-}
-.container::after {
-    content: "🧸ྀི";
-    position: absolute;
-    bottom: 15px;
-    left: 20px;
-    font-size: 2rem;
-    transform: scale(1.05);
-    box-shadow: 0 12px 25px rgba(0, 0, 0, .3);
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Dinda Fitrian Agustin</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-.profile {
-    text-align: center;
-    margin-bottom: 35px;
-}
-.profile img {
-    max-width: 70%;
-    max-height: 170px;
-    width: auto;
-    height: auto;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 6px solid #f783ac;
-    box-shadow: 0 10px 25px rgba(247, 131, 172, .5);
-    transition: .4s;
-    cursor: pointer;
-}
-.profile img:hover {
-    transform: scale(1.05) rotate(3deg);
-}
-.profile h1 {
-    font-size: 2.8rem; 
-    color: #0d6efd;
-    margin-top: 15px;
-}
-.profile p {
-    color: #f06595;
-    font-weight: 600;
-}
-nav {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 20px;
-}
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #fce4ec; 
+            color: #880e4f; 
+            overflow-x: hidden;
+        }
 
-nav a {
-    text-decoration: none;
-    color: blue;
-    font-weight: 600;
-    padding: 12px 20px;
-    margin: 0 15px;
-    background-color: #fff;
-    border-radius: 30px;
-    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1); /* Efek bayangan */
-    transition: all 0.3s ease; /* Transisi halus */
-    cursor: pointer;
-}
+        nav {
+            background-color: #f50057; 
+            padding: 20px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 100;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
 
-nav a:hover {
-    background-color: #4dabf7;
-    color: #fff;
-    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.2);
-    transform: scale(1.05); /* Menambah ukuran sedikit tanpa mengubah posisi */
-}
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 18px;
+            transition: all 0.3s ease;
+        }
 
+        nav a:hover {
+            text-decoration: underline;
+            color: #ff80ab; /* Lighter Pink */
+        }
 
-.section {
-    margin-top: 30px;
-}
-.section h2 {
-    font-size: 1.6rem;
-    color: #0d6efd;
-    margin-bottom: 15px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    cursor: pointer;
-    padding: 10px;
-}
-.section h2::before {
-    content: "💗";
-}
-.card {
-    background: linear-gradient(135deg, #f8f9fa, #ffffff);
-    border-radius: 20px;
-    padding: 50px;
-    box-shadow: 0 8px 18px rgba(0, 0, 0, .12);
-    transition: all .4s ease;
-    cursor: pointer;
-}
-.card:hover {
-    transform: translateY(-10px) scale(1.03);
-    box-shadow: 0 18px 35px rgba(0, 0, 0, .25);
-}
-ul {
-    list-style: none;
-    margin-top: 10px;
-}
-ul li {
-    margin-bottom: 10px;
-    padding-left: 28px;
-    position: relative;
-}
-ul li::before {
-    content: "💖";
-    position: absolute;
-    left: 0;
-}
-.sosmed {
-    margin-top: 15px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-.sosmed a {
-    text-decoration: none;
-    padding: 12px 20px;
-    border-radius: 30px;
-    background: linear-gradient(135deg, #4dabf7, #f783ac);
-    color: #fff;
-    font-weight: 600;
-    box-shadow: 0 8px 18px rgba(0, 0, 0, .2);
-    transition: .3s;
-    cursor: pointer;
-}
-.sosmed a:hover {
-    transform: translateY(-4px) scale(1.05);
-    box-shadow: 0 12px 25px rgba(0, 0, 0, .25);
-}
+        /* Header Section */
+        header {
+            height: 100vh;
+            background: url('gmbar/propil.png') no-repeat center center/cover;
+            text-align: center;
+            padding-top: 100px;
+            position: relative;
+            color: white;
+        }
 
-.btn-back-to-top {
-    background-color: #4dabf7;
-    color: white;
-    padding: 12px 25px;
-    border-radius: 30px;
-    border: none;
-    cursor: pointer;
-    box-shadow: 0 8px 18px rgba(0, 0, 0, .2);
-    transition: all 0.3s ease;
-    margin-top: 20px;
-    display: inline-block;
-}
-.btn-back-to-top:hover {
-    background-color: #f783ac;
-    transform: scale(1.05);
-    box-shadow: 0 12px 25px rgba(0, 0, 0, .3);
-}
-</style>
+        header h1 {
+            font-size: 48px;
+            font-weight: 600;
+        }
+
+        header p {
+            font-size: 20px;
+            font-weight: 300;
+            margin-top: 10px;
+        }
+
+        .cta-button {
+            margin-top: 30px;
+            padding: 15px 30px;
+            background-color: #f50057;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #c51162;
+        }
+
+        section {
+            padding: 60px 20px;
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        section h2 {
+            font-size: 32px;
+            color: #880e4f;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-top: 30px;
+        }
+
+        .grid-item {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .grid-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .grid-item img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .grid-item h3 {
+            font-size: 24px;
+            color: #880e4f;
+            margin-bottom: 10px;
+        }
+
+        .grid-item p {
+            font-size: 18px;
+            color: #555;
+        }
+
+        .social-links a {
+            margin: 15px;
+            font-size: 22px;
+            color: #880e4f;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #f50057;
+        }
+    </style>
 </head>
 
 <body>
-
-<div class="container">
-
     <nav>
         <a href="#tentang-saya">Tentang Saya</a>
         <a href="#hobi-saya">Hobi Saya</a>
-        <a href="#makanan-favorit">Mknan Favorit</a>
+        <a href="#makanan-favorit">Makanan Favorit</a>
         <a href="#sosial-media">Sosial Media</a>
     </nav>
 
-    <div class="profile">
-        <img src="gmbar/propil.png" alt="Foto Profil">
+    <header>
         <h1>Dinda Fitrian Agustin</h1>
         <p>Pelajar | Web Developer 💻</p>
-    </div>
+        <a href="#tentang-saya" class="cta-button">Lihat Portofolio</a>
+    </header>
 
-    <div class="section" id="tentang-saya">
+    <section id="tentang-saya">
         <h2>Tentang Saya</h2>
-        <div class="card">
-            <p>"Saya adalah siswi kelas 10 di SMK Riyadhul Ulum 
-                yang sangat tertarik dengan dunia teknologi, khususnya pengembangan web. 
-                Sejak kecil, saya sudah tertarik dengan hal-hal yang berhubungan dengan komputer dan internet. 
-                Saya selalu ingin tahu lebih banyak tentang cara membuat situs web 
-                dan aplikasi yang bisa mempermudah kehidupan sehari-hari. ✨💖
-            </p>
-            <button class="btn-back-to-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">Kembali ke Atas</button>
+        <div class="grid-container">
+            <div class="grid-item">
+                <img src="gmbar/propil.png" alt="Foto Profil">
+                <h3>Siapa Saya?</h3>
+                <p>Saya adalah siswi kelas 10 di SMK Riyadhul Ulum yang sangat tertarik dengan dunia teknologi, terutama pengembangan web. Saya senang belajar dan selalu berusaha menciptakan hal-hal baru melalui pemrograman.</p>
+            </div>
         </div>
-    </div>
+    </section>
 
-    <div class="section" id="hobi-saya">
+    <section id="hobi-saya">
         <h2>Hobi Saya</h2>
-        <div class="card">
-            <ul>
-                <li>Ngoding <br><img src="gmbar/coding.png" alt="Hobi Saya" style="width:20%";></li>
-                <li>Bermain game <br><img src="gmbar/game.png" alt="Hobi Saya" style="width:20%";> <br>
-                    <a href="https://poki.com/id/g/temple-run-2" target="_blank">klik ini & cobalah bbrapa game yg saia mainkn!</a>
-                </li>
-                <li>Mendengarkan musik <br><img src="gmbar/musik.png" alt="Hobi Saya" style="width:20%";><br> </li>
-            </ul>
-            <button class="btn-back-to-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">Kembali ke Atas</button>
+        <div class="grid-container">
+            <div class="grid-item">
+                <img src="gmbar/coding.png" alt="Ngoding">
+                <h3>Ngoding</h3>
+                <p>Saya senang menulis kode dan menciptakan website atau aplikasi yang berguna untuk orang lain.</p>
+            </div>
+            <div class="grid-item">
+                <img src="gmbar/game.png" alt="Bermain Game">
+                <h3>Bermain Game</h3>
+                <p>Saya juga menikmati waktu luang dengan bermain game untuk hiburan dan juga sebagai sarana relaksasi.</p>
+            </div>
+            <div class="grid-item">
+                <img src="gmbar/musik.png" alt="Mendengarkan Musik">
+                <h3>Mendengarkan Musik</h3>
+                <p>Musik adalah teman saya dalam setiap kegiatan, baik itu saat coding, belajar, atau bersantai.</p>
+            </div>
         </div>
-    </div>
+    </section>
 
-    <div class="section" id="makanan-favorit">
-        <h2>Mknan Favorit Saya</h2>
-        <div class="card">
-            <ul>
-                <li>Mie goreng <br><img src="gmbar/mie.png" alt="Makanan Favorit" style="width:20%;"></li>
-                <li>Ayam geprek <br><img src="gmbar/ayam.png" alt="Makanan Favorit" style="width:20%;"></li>
-            </ul>
-             <button class="btn-back-to-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">Kembali ke Atas</button>
+    <section id="makanan-favorit">
+        <h2>Makanan Favorit Saya</h2>
+        <div class="grid-container">
+            <div class="grid-item">
+                <img src="gmbar/mie.png" alt="Mie Goreng">
+                <h3>Mie Goreng</h3>
+            </div>
+            <div class="grid-item">
+                <img src="gmbar/ayam.png" alt="Ayam Geprek">
+                <h3>Ayam Geprek</h3>
+            </div>
         </div>
-    </div>
+    </section>
 
-<div class="section" id="sosial-media">
-    <h2>Sosial Media Saya</h2>
-    <div class="sosmed">
-        <a href="https://instagram.com/me_clynophile08" target="_blank">Instagram 📸</a>
-        <a href="https://facebook.com/Cara Mell" target="_blank">Facebook 📘</a>
-        <a href="https://github.com" target="_blank">GitHub 🐙</a>
-    </div>
-     <button class="btn-back-to-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">Kembali ke Atas</button>
-</div>
+    <section id="sosial-media">
+        <h2>Sosial Media Saya</h2>
+        <div class="social-links">
+            <a href="https://instagram.com/me_clynophile08" target="_blank">Instagram 📸</a>
+            <a href="https://facebook.com/Cara Mell" target="_blank">Facebook 📘</a>
+            <a href="https://github.com" target="_blank">GitHub 🐙</a>
+        </div>
+    </section>
+
+</body>
+
+</html>
